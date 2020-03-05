@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    /*弹性布局*/
+    display: flex;
+    /*在弹性盒对象的元素中的各项周围留有空白，前两句作用*/
+    justify-content: center;
+    /*居中对齐弹性盒的各项元素*/
+    align-items: center;
+    background-color: #f3f4f5;
+    /*设置元素内弹性盒元素的方向为相反的顺序*/
+    flex-direction: column;
+}
+.container {
+    position: relative;
+    margin-top: 250px;
+    max-width: 800px;
+    transform: skewY(-20deg);
+}
+.container h2 {
+    position: relative;
+    color: #2d97b7;
+    font-size: 4em;
+}
+.container .skew {
+    transform-origin: top;
+    transform: skewX(45deg);
+}
+.container .skew p {
+    color: aqua;
+    font-size: 1.2em;
+}
+.container .skew a {
+    position: relative;
+    display: block;
+    padding: 10px 30px;
+    width: 60px;
+    background: transparent;
+    color: chartreuse;
+    transform-origin: top;
+    margin-top: 20px;
+    border: 2px solid #ab7967;
+    transform: skewX(-45deg);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.container .skew a:hover {
+    color: cornsilk;
+    background-color: crimson;
+}
+.container .imgBox {
+    position: relative;
+    width: 100%;
+    height: 232px;
+    /*设置旋转元素的基点位置*/
+    transform-origin: bottom;
+    transform: skewX(45deg);
+}
+.container .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: grayscale(1);
+    max-width: 100%;
+    transition: 0.5s;
+}
+.container .imgBox:hover img:nth-child(3) {
+    transform: translate(100px, -100px);
+}
+.container .imgBox:hover img:nth-child(2) {
+    transform: translate(50px, -50px);
+    /*不透明度*/
+    opacity: 0.5;
+}
+.container .imgBox:hover img:nth-child(1) {
+    /*transform: translate(50px, -50px);*/
+    /*不透明度*/
+    opacity: 0.1;
+}
